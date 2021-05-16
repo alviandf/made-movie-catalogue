@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/navMovie">
+
+    <fragment
+        android:id="@+id/navMovie"
+        android:name="com.alviandf.mademoviecatalogue.presentation.main.MovieFragment"
+        android:label="Movie"
+        tools:layout="@layout/fragment_movie_or_tvshow" />
+
+    <fragment
+        android:id="@+id/navTv"
+        android:name="com.alviandf.mademoviecatalogue.presentation.main.TvFragment"
+        android:label="TV Show"
+        tools:layout="@layout/fragment_movie_or_tvshow" />
+
+    <fragment
+        android:id="@+id/navFavorite"
+        android:name="com.alviandf.mademoviecatalogue.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+
+</navigation>
