@@ -21,7 +21,7 @@ interface MovieAndTvShowDao {
     @Query("SELECT * FROM ${Const.TB_NAME} WHERE type = 'type_movie' AND title LIKE '%' || :search || '%'")
     fun getSearchMovies(search: String): Flow<List<MovieOrTvShowEntity>>
 
-    @Query("SELECT * FROM ${Const.TB_NAME} WHERE type = 'type_tvshow' AND title LIKE '%' || :search || '%'")
+    @Query("SELECT * FROM ${Const.TB_NAME} WHERE type = 'type_tvshow' AND name LIKE '%' || :search || '%'")
     fun getSearchTvShows(search: String): Flow<List<MovieOrTvShowEntity>>
 
     @Query("SELECT * FROM ${Const.TB_NAME} WHERE type = 'type_movie' AND isFavorite = 1")
@@ -31,8 +31,8 @@ interface MovieAndTvShowDao {
     fun getFavoriteTvShows(): Flow<List<MovieOrTvShowEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMovie(moviesOrTvShows: List<MovieOrTvShowEntity>)
+    suspend fun insertMoviesOrTvShows(moviesOrTvShows: List<MovieOrTvShowEntity>)
 
     @Update
-    fun updateFavoriteMovie(movieOrTvShow: MovieOrTvShowEntity)
+    fun updateFavoriteMovieOrTvShow(movieOrTvShow: MovieOrTvShowEntity)
 }

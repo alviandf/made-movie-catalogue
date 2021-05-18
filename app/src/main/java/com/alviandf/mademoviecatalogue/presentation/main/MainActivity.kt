@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
             id.navFavorite
         ).build()
 
-        val navController = Navigation.findNavController(this,
+        val navController = Navigation.findNavController(
+            this,
             id.navHostFragment
         )
 

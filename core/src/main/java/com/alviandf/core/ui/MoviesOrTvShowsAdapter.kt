@@ -35,17 +35,17 @@ class MoviesOrTvShowsAdapter : RecyclerView.Adapter<MoviesOrTvShowsAdapter.ListV
     }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         fun bind(data: MovieOrTvShow) {
             with(itemView) {
                 Glide.with(context)
                     .load(Const.URL_POSTER + data.poster_path)
                     .into(imgPoster)
                 tvName.text = if (data.title.isNotEmpty()) data.title else data.name
-                setOnClickListener{
+                setOnClickListener {
                     onItemClick?.invoke(data)
                 }
             }
         }
-
     }
 }

@@ -40,6 +40,11 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    def room_version = "2.3.0"
+    def retrofit_version = "2.9.0"
+    def logging_interceptor_version = '4.9.0'
+    def lifecycle_version = "2.3.1"
+
     // Room
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"

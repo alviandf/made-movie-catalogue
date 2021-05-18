@@ -7,11 +7,11 @@ import kotlinx.coroutines.flow.Flow
 
 class CatalogueAppInteractor(private val iCatalogueAppRepository: ICatalogueAppRepository) : CatalogueAppUseCase {
 
-    override fun getAllMovies(): Flow<Resource<List<MovieOrTvShow>>> =
-        iCatalogueAppRepository.getAllMovies()
+    override fun getMovies(): Flow<Resource<List<MovieOrTvShow>>> =
+        iCatalogueAppRepository.getMovies()
 
-    override fun getAllTvShows(): Flow<Resource<List<MovieOrTvShow>>> =
-        iCatalogueAppRepository.getAllTvShows()
+    override fun getTvShows(): Flow<Resource<List<MovieOrTvShow>>> =
+        iCatalogueAppRepository.getTvShows()
 
     override fun getFavoriteMovies(): Flow<List<MovieOrTvShow>> =
         iCatalogueAppRepository.getFavoriteMovies()
@@ -25,7 +25,7 @@ class CatalogueAppInteractor(private val iCatalogueAppRepository: ICatalogueAppR
     override fun getFavoriteTvShows(): Flow<List<MovieOrTvShow>> =
         iCatalogueAppRepository.getFavoriteTvShows()
 
-    override fun setMovieFavorite(movieOrTvShow: MovieOrTvShow, state: Boolean) =
-        iCatalogueAppRepository.setMovieFavorite(movieOrTvShow, state)
+    override fun setFavoriteMovieOrTvShow(movieOrTvShow: MovieOrTvShow, state: Boolean) =
+        iCatalogueAppRepository.setFavoriteMovieOrTvShow(movieOrTvShow, state)
 
 }

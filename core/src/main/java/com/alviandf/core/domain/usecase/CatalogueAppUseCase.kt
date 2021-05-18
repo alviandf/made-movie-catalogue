@@ -6,9 +6,9 @@ import kotlinx.coroutines.flow.Flow
 
 interface CatalogueAppUseCase {
 
-    fun getAllMovies(): Flow<Resource<List<MovieOrTvShow>>>
+    fun getMovies(): Flow<Resource<List<MovieOrTvShow>>>
 
-    fun getAllTvShows(): Flow<Resource<List<MovieOrTvShow>>>
+    fun getTvShows(): Flow<Resource<List<MovieOrTvShow>>>
 
     fun getFavoriteMovies(): Flow<List<MovieOrTvShow>>
 
@@ -18,5 +18,5 @@ interface CatalogueAppUseCase {
 
     fun getSearchTvShows(search: String): Flow<List<MovieOrTvShow>>
 
-    fun setMovieFavorite(movieOrTvShow: MovieOrTvShow, state: Boolean)
+    fun setFavoriteMovieOrTvShow(movieOrTvShow: MovieOrTvShow, state: Boolean)
 }

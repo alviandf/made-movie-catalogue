@@ -7,6 +7,6 @@ import com.alviandf.core.domain.usecase.CatalogueAppUseCase
 class DetailViewModel(private val catalogueAppUseCase: CatalogueAppUseCase) : ViewModel() {
 
     fun setFavoriteMovieOrTvShow(movieOrTvShow: MovieOrTvShow, newStatus: Boolean) {
-        catalogueAppUseCase.setMovieFavorite(movieOrTvShow, newStatus)
+        catalogueAppUseCase.setFavoriteMovieOrTvShow(movieOrTvShow, newStatus)
     }
 }

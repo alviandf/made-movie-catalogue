@@ -10,11 +10,11 @@ import com.alviandf.core.domain.usecase.CatalogueAppUseCase
 class MainViewModel(private val catalogueAppUseCase: CatalogueAppUseCase) : ViewModel() {
 
     fun getMovies(): LiveData<Resource<List<MovieOrTvShow>>> {
-        return catalogueAppUseCase.getAllMovies().asLiveData()
+        return catalogueAppUseCase.getMovies().asLiveData()
     }
 
     fun getTvShows(): LiveData<Resource<List<MovieOrTvShow>>> {
-        return catalogueAppUseCase.getAllTvShows().asLiveData()
+        return catalogueAppUseCase.getTvShows().asLiveData()
     }
 
     fun getSearchMovies(search: String): LiveData<List<MovieOrTvShow>> {

@@ -9,7 +9,6 @@ import com.alviandf.mademoviecatalogue.favorite.di.favoriteModule
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_favorite.tabs
 import kotlinx.android.synthetic.main.fragment_favorite.viewPager
-import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
 class FavoriteFragment : Fragment() {
