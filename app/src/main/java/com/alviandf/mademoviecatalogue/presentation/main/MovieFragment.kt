@@ -46,7 +46,7 @@ class MovieFragment : Fragment() {
         searchView.setOnQueryTextListener(object : OnQueryTextListener {
 
             override fun onQueryTextChange(newText: String): Boolean {
-                mainViewModel.getSearchMovies(newText).observe(viewLifecycleOwner){
+                mainViewModel.getSearchMovies(newText).observe(viewLifecycleOwner) {
                     setUI(it)
                 }
                 return false
@@ -89,5 +89,10 @@ class MovieFragment : Fragment() {
             adapter = movieOrTvShowAdapter
             setRecycledViewPool(RecyclerView.RecycledViewPool())
         }
+    }
+
+    override fun onDestroyView() {
+        rvMoviesOrTvShows.adapter = null
+        super.onDestroyView()
     }
 }

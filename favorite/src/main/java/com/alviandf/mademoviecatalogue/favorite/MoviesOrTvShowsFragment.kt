@@ -90,4 +90,9 @@ class MoviesOrTvShowsFragment : Fragment() {
         }
         moviesOrTvShowsAdapter.setData(data)
     }
+
+    override fun onDestroyView() {
+        rvMoviesOrTvShows.adapter = null
+        super.onDestroyView()
+    }
 }
