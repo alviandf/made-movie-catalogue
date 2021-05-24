@@ -70,4 +70,8 @@ dependencies {
     // Leak Canary
     def leak_canary_version = "2.6"
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
+
+    // Jacoco
+    def jacocoVersion = '0.8.4'
+    implementation "org.jacoco:org.jacoco.core:$jacocoVersion"
 }
