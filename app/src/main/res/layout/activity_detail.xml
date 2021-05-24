@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@color/colorGreyLight" />
+        tools:src="@color/colorGreyLight"
+        android:contentDescription="@string/label_poster_image" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTitle"
